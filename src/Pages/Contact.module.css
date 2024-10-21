@@ -1,0 +1,120 @@
+.container {
+    color: #f0efed; /* Light color for text */
+    background-color:#faf7f5;/* Almost black background */
+    padding-top: 20px; /* Reduced padding at the top to push content higher */
+    padding-bottom: 40px; /* Maintain padding at the bottom */
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top of the container */
+    height: 50vh;
+}
+
+.heading {
+    color:  black;
+    font-size: 2rem;
+    font-family: "Frank Ruhl Libre", serif;
+    margin-bottom: 10px; 
+    margin-top: 50px;
+}
+
+.contactItems {
+    display: flex; /* Horizontal layout */
+    justify-content: space-around;
+    width: 100%; /* Full width to distribute content */
+    font-family: "Frank Ruhl Libre", serif;
+    padding-top: 20px; /* Added top padding to push contact items lower */
+}
+
+.contactItem {
+    color: #f89538;
+    padding: 20px;
+    display: flex;
+    font-family: "Frank Ruhl Libre", serif;
+    flex-direction: column; /* Aligns items vertically in the flex container */
+    align-items: center; /* Centers items horizontally */
+    font-size: 1.5rem; /* Increased font size for better readability */
+    border-radius: 5px; /* Rounded borders */
+}
+
+.icon {
+    color: #f89538; /* Accent color for icons */
+    font-size: 3rem; /* Significantly larger icons */
+    margin-bottom: 8px; /* Space between icon and text */
+}
+
+.link {
+    color: #d9b28d; /* Primary color for links */
+    text-decoration: none;
+    margin-top: 10px; /* Added margin to increase space between span text and link */
+}
+
+.link:hover {
+    text-decoration: underline; 
+    color: #f89538;
+}
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        align-items: center; /* Ensure everything is centered */
+    }
+
+    .heading {
+        text-align: center; /* Center align heading */
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    .contactItems {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center align the contact items */
+    }
+
+    .contactItem {
+        font-size: 1.2rem; /* Smaller font size to fit more content */
+    }
+
+    .icon {
+        font-size: 2.5rem; /* Smaller icon size for smaller screens */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        height: auto; /* Adjust height for better fit */
+        align-items: center; /* Ensure everything is centered */
+    }
+
+    .heading {
+        text-align: center; /* Center align heading */
+        font-size: 1.8rem; /* Adjusted font size for iPad */
+    }
+
+    .contactItems {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Center align the contact items */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .contactItem {
+        font-size: 1.4rem; /* Adjusted font size for iPad */
+        margin: 10px; /* Add margin for spacing */
+        width: calc(50.33% - 20px); /* Adjust width for three items in a row */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon {
+        font-size: 2.8rem; /* Adjusted icon size for iPad */
+    }
+}

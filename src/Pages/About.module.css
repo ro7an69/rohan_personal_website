@@ -1,0 +1,271 @@
+.aboutContainer {
+  background-color: #000; /* Black background */
+  height: 100vh; 
+  color: #FFF; /* Default white text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center items */
+  justify-content: flex-start; /* Align items to the start */
+  padding-bottom:  5vh;
+  text-align: center; /* Center text */
+  padding-top: 5vh; /* Adjust this to move content up, decrease for higher */
+}
+
+.aboutHeading {
+  color: #f89538; /* Orange color for "About" heading */
+  font-size: 1.6rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem; /* Adjust if needed */
+  letter-spacing: .4rem;
+}
+
+.aboutIntroduction {
+  color:#884d16; /* White color for introduction text */
+  font-size: 3rem;
+  line-height: 1.25;
+  margin-right: 15rem;
+  margin-bottom: 1.2rem; /* Decrease to bring text higher, use vh for responsiveness */
+  font-weight: bold; /* Makes the text bold */
+  margin-top: -0.2vh; /* Negative margin brings it closer to the "About" heading, adjust for spacing */
+}
+
+.introImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.imageWrapper {
+  margin-right: 5.625rem; /* Adjust spacing between image and text */
+}
+
+
+
+
+.profileImage {
+  height: 7.8rem;
+  width: 7.8rem;
+  border: 0.063rem solid #F06000;
+  border-radius: 50%;
+  max-width: 100%; /* Ensures responsiveness */
+}
+
+
+
+.dualParagraphContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75rem; /* Adjust the max-width as needed */
+  
+  padding: 1.25rem;
+}
+
+.leftParagraph, .rightParagraph {
+  flex-basis: 48%; /* Adjust the width of each paragraph */
+  margin: 1.25rem;
+}
+
+.leftParagraph p {
+  font-size: 1.125rem; 
+  margin-left: 5rem;
+ 
+  line-height: 1.6; 
+  text-align: justify;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-weight: normal;
+  color: #f0efed;
+}
+
+.rightParagraph p {
+  font-size: 18px; /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height as needed */
+  margin-right: 5rem;
+  text-align: justify;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-weight: normal;
+  color: #f0efed;
+
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .dualParagraphContainer {
+    flex-direction: column;
+  }
+  
+
+  .leftParagraph, .rightParagraph {
+    flex-basis: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.buttonsContainer {
+  width: 200%;
+  display: flex;
+  justify-content: center; /* Align buttons horizontally in the center */
+  gap: 50px; /* Spacing between buttons */
+  margin-top: 20px; 
+}
+.hireMeButton{
+  margin-left:5.5rem;
+}
+.hireMeButton, .downloadCVButton {
+  font-family: 'opensans-bold', sans-serif; /* Sets the font size and line height */
+  background:#d9b28d; /* Teal background */
+  color: #11100e; 
+  font-weight: 80px;
+  padding: 15px 80px;
+  font-weight: 40rem;
+  width:12%;
+  border: none; 
+  margin-right: 4rem;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  text-decoration: none; /* Removes underline from text */
+  letter-spacing: 0; /* Sets letter spacing to normal */
+  display: inline-block; /* Ensures the tags are aligned properly as inline-block elements */
+}
+
+.hireMeButton:hover, .downloadCVButton:hover {
+  background: #734b26;
+  color:#f0efed; /* Darkens the background slightly on hover for interaction feedback */
+}
+
+
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+.buttonsContainer {
+  flex-direction: column; /* Stack buttons vertically */
+  width: 100%; /* Adjust the width to fit smaller screens */
+  gap: 20px; /* Reduce gap for closer button placement */
+}
+
+.hireMeButton, .downloadCVButton {
+  width: 50%; /* Adjust button width for better fit */
+  padding: 10px 40px; /* Adjust padding for smaller buttons */
+  margin: 0 auto; /* Center buttons horizontally */
+}
+
+.introImageWrapper, .dualParagraphContainer {
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.imageWrapper {
+  margin-right: 0; /* Remove margin between image and introduction text */
+}
+
+.aboutIntroduction {
+  margin-right: 0; /* Ensure the text aligns properly */
+  font-size: 2rem; /* Adjust font size for smaller screens */
+}
+
+.leftParagraph, .rightParagraph {
+  flex-basis: 100%; /* Allow paragraphs to take full width */
+  margin: 20px 0; 
+}
+
+.leftParagraph p, .rightParagraph p {
+  font-size: 17px; /* Adjust font size for readability on smaller screens */
+  margin-left: 0; /* Align text properly */
+}
+}
+
+@media (max-width: 1068px) {
+.aboutContainer {
+  padding-top: 5vh; /* Reduce top padding for tighter vertical spacing */
+  height: 100%;
+}
+
+.hireMeButton, .downloadCVButton {
+  padding: 10px 20px; /* Further reduce padding for very small screens */
+  width: 70%; /* Increase width to maintain button visibility and accessibility */
+}
+
+.aboutIntroduction {
+  font-size: 1.5rem; /* Further adjust font size for very small screens */
+}
+
+.profileImage {
+  height: 6rem; /* Adjust image size for smaller screens */
+  width: 6rem;
+}
+}
+
+@media (max-width: 480px) {
+.aboutContainer {
+  width: 100%;
+  padding-bottom: 5vh;
+  padding-top: 5vh; /* Increase top padding to avoid content being too tight at the top */
+  height: auto; /* Change height to auto for better height management on mobile */
+  align-items: center; /* Ensure everything is centered */
+}
+
+.aboutHeading, .aboutIntroduction {
+  text-align: center; /* Center-align text for mobile devices */
+  margin: 0 10px; /* Add horizontal margin for better side spacing */
+}
+
+.aboutIntroduction {
+  font-size: 1.5rem; /* Adjust font size to fit smaller screens */
+  margin-right: 0; /* Remove right margin */
+  margin-bottom: 1rem; /* Increase bottom margin for spacing between elements */
+}
+
+.introImageWrapper {
+  justify-content: center; /* Center content */
+}
+
+.imageWrapper {
+  margin: 0 auto; /* Center the image wrapper */
+}
+
+.profileImage {
+  margin-bottom: 20px; /* Add margin below the image for spacing */
+}
+
+.dualParagraphContainer {
+  padding: 10px 15px; /* Adjust padding for better spacing */
+}
+
+.leftParagraph, .rightParagraph {
+  margin: 10px 0; /* Adjust vertical margin for spacing */
+}
+
+.leftParagraph p, .rightParagraph p {
+  font-size: 16px; /* Decrease font size for better readability */
+  margin-left: 0; /* Remove left margin for proper alignment */
+  margin-right: 0; /* Remove right margin for proper alignment */
+  text-align: center; /* Center-align text for consistency */
+}
+
+.buttonsContainer {
+  flex-direction: column; /* Stack buttons vertically */
+  width: 100%; /* Adjust the width to fit smaller screens */
+  gap: 15px; /* Reduce gap for closer button placement */
+}
+
+.hireMeButton, .downloadCVButton {
+  padding: 12px 30px; /* Adjust padding for a better fit */
+  width: 80%; /* Adjust button width for easier tapping */
+  margin: 1px auto; /* Ensure buttons are centered and spaced appropriately */
+}
+
+.hireMeButton:hover, .downloadCVButton:hover {
+  background: #734b26; /* Maintain hover effect for visual feedback */
+  color: #f0efed;
+}
+}

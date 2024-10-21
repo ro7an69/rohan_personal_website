@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.homeSection {
+  background-image: url("/src/Assets/mountains.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  position: relative;
+  padding: 0 20px; /* Add some padding on the sides */
+}
+
+.head, .name, .roles, .socialLinks {
+  margin-bottom: 20px; /* Add space between sections */
+  text-align: center;
+}
+
+.head {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 8rem;
+}
+
+.name {
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 4.3em;
+}
+
+.roles {
+  font-size: 2.5em;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Space between icons */
+  flex-wrap: wrap; /* Allow icons to wrap to the next line on small screens */
+  margin-top: 10px; /* Additional top margin for spacing */
+}
+
+
+.socialLinks a {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.socialLinks a:hover .fa {
+  color: #add8e6;
+  transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .head,  .roles, .homeSection {
+    margin-top:1px; /* Reduce bottom margin */
+    height: auto;
+    width: 100%;
+  }
+  .name h1{
+    margin-top:1px; /* Reduce bottom margin */
+    height: auto;
+    width: 100%;
+    font-size: 22px;
+  }
+  
+  .socialLinks {
+    gap: 20px; /* Reduce gap */
+  
+  }
+}
+
+@media (max-width: 480px) {
+  .head, .name, .roles {
+    font-size: 55%; /* Scaled down from 60% to enhance readability */
+    margin-bottom: 20px; /* Consistent margin */
+    margin-left: -1.0rem;
+  
+  }
+  
+ 
+.homeSection{
+  height: 60vh;
+  width: 100%;
+  padding: 20px;
+}
+  .socialLinks {
+    gap: 15px; /* Further reduce gap */
+    
+  }
+
+  .socialLinks a {
+    transform: scale(0.85); /* Adjust scaling */
+  }
+}

@@ -1,0 +1,172 @@
+/* Resume.module.css */
+
+.ResumeContainer {
+  text-align: center;
+  padding: 20px;
+  background-color:#faf7f5;
+
+   
+
+
+}
+  
+.ResumeHeader {
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+.sectionHeader {
+ margin-bottom: 60px;
+ 
+}
+.sectionHeader h2 {
+  font-size: 1.4rem;
+  color:#884d16; ;  /* Matching the eye-catching blue */
+  font-family: 'opensans-bold', sans-serif;
+  text-align: center;
+}
+.ResumeHeader h1 {
+  font-size: 1.6rem;
+  line-height: 1.875;
+  margin-bottom: 0.3rem;
+  letter-spacing: .4rem;
+  font-family: 'opensans-bold', sans-serif;
+  font-weight: 800;
+  color: #884d16; /* A nice, eye-catching blue */
+}
+/* Resume.module.css */
+
+/* ... other styles ... */
+
+
+.bullet {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 15px; /* Adjust as needed for space between list items */
+  padding-left: 0; /* Aligns bullets to the left */
+  color: #11100e;
+}
+
+.bullet::before {
+  content: '•';
+  color: #c56307;;
+  font-weight: bold;
+  font-size: 25px; /* Increases the size of the bullet point */
+  position: relative; /* Allows us to position the bullet point */
+  top: -2px; /* Adjusts the bullet point position to be higher */
+  margin-right: 10px; /* Adjust space between the bullet and the text */
+  vertical-align: middle; /* Centers the bullet vertically relative to the text */
+}
+
+/* ... other styles ... */
+
+.ResumeHeader p {
+  margin-top: 10px;
+  font-family: "lora-regular", serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #e9ae77;
+}
+
+.row {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.resume-timeline {
+  max-width: 980px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timelineItem {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.timelineIcon {
+  position: absolute;
+  top: -25px; /* Adjusted to ensure the icon is correctly positioned after size increase */
+ color:#090705;
+
+  border: 3px solid #e9ae77; /* Increased border size for visual balance */
+  border-radius: 100%; /* Ensures the border remains perfectly round */
+  width: 42px; /* Increased size */
+  height: 42px; /* Increased size */
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* These flex properties ensure the FontAwesome icon is centered within the circle */
+}
+
+
+
+.timelineContent {
+  width: 66%;
+  top: 20px;
+  padding: 2.2% 4%;
+  
+  text-align: left;
+  border: 2px solid #e9ae77; 
+  border-radius: 70px;
+  background: #fff;
+
+  position: relative;
+  z-index: 99;
+}
+
+.timelineContent h3 {
+  color: #007bff;
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: 'opensans-bold', sans-serif;
+  font-weight: 800;
+}
+
+.timelineContent p {
+  font-family: 'Gilroy-Bold', sans-serif;
+  color: #11100e;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0;
+  
+}
+
+.resume-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #e9ae77;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .ResumeContainer {
+    font-size: 75%; /* Adjust font size for medium screens */
+    
+    height: 10%;
+  }
+  .timelineContent{
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ResumeContainer {
+    font-size: 75%; /* Adjust font size for medium screens */
+    
+    height: 10%;
+  }
+  .timelineContent{
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+  }
+}

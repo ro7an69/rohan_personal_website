@@ -1,0 +1,150 @@
+.activitiesContainer {
+  background-color: black;
+  padding: 20px;
+}
+
+.mainHeading {
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  padding: 3.2rem 0 8rem 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 2.7rem;
+  line-height: 1.176;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: relative;
+}
+
+.skillsContainer {
+  display: flex;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the categories */
+  margin: 0 25px;
+  box-sizing: border-box;
+}
+
+.category {
+  flex-basis: calc(33.333% - 20px); /* Three categories per row */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.categoryHeading {
+  color: #f89538;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.skillsList {
+  list-style-type: none;
+  padding-left: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Lora", serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.skillsList li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.skillsList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 6px;
+  background-color: #884d16;
+  border-radius: 50%;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .mainHeading {
+    font-size: 2.5rem;
+    padding: 2.5rem 0 6rem 0;
+  }
+
+  .category {
+    flex-basis: calc(50% - 20px); /* Two categories per row */
+  }
+
+  .categoryHeading {
+    font-size: 1.8rem;
+  }
+
+  .skillsList {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .mainHeading {
+    font-size: 2rem;
+    padding: 2rem 0 4rem 0;
+  }
+
+  .skillsContainer {
+    margin: 0 15px;
+  }
+
+  .category {
+    flex-basis: 100%; /* One category per row */
+    margin: 10px 0;
+  }
+
+  .categoryHeading {
+    font-size: 1.6rem;
+  }
+
+  .skillsList {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 1.8rem;
+    padding: 1.5rem 0 3rem 0;
+    letter-spacing: 0.3rem;
+  }
+
+  .skillsContainer {
+    margin: 0 10px;
+  }
+
+  .categoryHeading {
+    font-size: 1.4rem;
+    justify-content: center;
+    display: flex;
+  }
+
+  .skillsList {
+    font-size: 0.95rem;
+ 
+    justify-content: center;
+    display: flex;
+  }
+
+  .skillsList li {
+    padding-left: 15px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .skillsList li::before {
+    height: 5px;
+    margin-left: 6px;
+    width: 5px;
+  }
+}
